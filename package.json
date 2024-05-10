@@ -1,12 +1,14 @@
 {
   "name": "sdc-app-bk",
-  "module": "/app/index.ts",
+  "module": "/src/index.ts",
   "type": "module",
   "scripts": {
     "db:generate": "drizzle-kit generate:sqlite",
     "db:migrate": "bun ./drizzle/migrate.ts",
     "db:studio": "drizzle-kit studio",
-    "start": "bun --watch app/index.ts"
+    "start": "bun --watch src/index.ts",
+
+    "deploy": "vercel"
   },
   "devDependencies": {
     "@types/bun": "latest",
